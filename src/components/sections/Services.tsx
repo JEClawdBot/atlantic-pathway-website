@@ -23,7 +23,10 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 sm:py-24">
+    <section
+      id="services"
+      className="border-t border-white/5 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900/40 py-20 sm:py-24"
+    >
       <div className="mx-auto w-full max-w-6xl px-6">
         <div className="max-w-2xl space-y-4">
           <p className="text-sm font-semibold uppercase tracking-[0.35em] text-emerald-300/80">
@@ -41,7 +44,7 @@ export default function Services() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:border-emerald-300/50"
+              className="rounded-2xl border border-white/10 bg-white/5 p-6 transition duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:border-emerald-300/60 hover:shadow-lg hover:shadow-emerald-500/20"
             >
               <h3 className="text-lg font-semibold text-white">{service.title}</h3>
               <p className="mt-3 text-sm text-slate-300">{service.description}</p>

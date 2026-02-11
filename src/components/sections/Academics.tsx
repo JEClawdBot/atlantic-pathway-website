@@ -7,7 +7,10 @@ const requirements = [
 
 export default function Academics() {
   return (
-    <section id="academics" className="py-20 sm:py-24">
+    <section
+      id="academics"
+      className="border-t border-white/5 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900/40 py-20 sm:py-24"
+    >
       <div className="mx-auto w-full max-w-6xl px-6">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr]">
           <div className="space-y-5">
