@@ -1,6 +1,9 @@
 export default function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden py-20 sm:py-28">
+    <section
+      id="home"
+      className="relative overflow-hidden border-b border-white/5 py-20 sm:py-28"
+    >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(16,185,129,0.2),_transparent_55%)]" />
       <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-10 px-6">
         <div className="max-w-2xl space-y-6">
