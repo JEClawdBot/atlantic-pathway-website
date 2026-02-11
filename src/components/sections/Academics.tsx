@@ -1,8 +1,8 @@
 const requirements = [
   "Minimum 2.0 GPA (C average) benchmark",
-  "National 5s & Highers progression planning",
-  "Transcript and test score documentation",
-  "Guidance on NCAA/NAIA eligibility standards",
+  "Completion of National 5s and Highers",
+  "Official academic transcripts and test score documentation",
+  "Guidance on NCAA/NAIA academic eligibility standards",
 ];
 
 export default function Academics() {
@@ -14,7 +14,7 @@ export default function Academics() {
       <div className="mx-auto w-full max-w-6xl px-6">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr]">
           <div className="space-y-5">
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-emerald-300/80">
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#A2D729]/80">
               Academic Requirements
             </p>
             <h2 className="text-3xl font-semibold text-white sm:text-4xl">
@@ -28,7 +28,7 @@ export default function Academics() {
             <ul className="space-y-3 text-sm text-slate-200">
               {requirements.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="mt-2 h-2 w-2 rounded-full bg-emerald-300" />
+                  <span className="mt-2 h-2 w-2 rounded-full bg-[#A2D729]" />
                   <span>{item}</span>
                 </li>
               ))}

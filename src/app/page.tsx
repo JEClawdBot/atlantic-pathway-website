@@ -1,6 +1,8 @@
 import Academics from "@/components/sections/Academics";
+import Coach from "@/components/sections/Coach";
 import Expectations from "@/components/sections/Expectations";
 import Hero from "@/components/sections/Hero";
+import Pathway from "@/components/sections/Pathway";
 import Pricing from "@/components/sections/Pricing";
 import Services from "@/components/sections/Services";
 import Footer from "@/components/layout/Footer";
@@ -14,6 +16,12 @@ export default function Home() {
       <main className="space-y-0">
         <FadeIn>
           <Hero />
+        </FadeIn>
+        <FadeIn>
+          <Pathway />
+        </FadeIn>
+        <FadeIn>
+          <Coach />
         </FadeIn>
         <FadeIn>
           <Services />
