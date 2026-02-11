@@ -11,7 +11,7 @@ import FadeIn from "@/components/ui/FadeIn";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
+    <div className="min-h-screen bg-[#0A0A0F] text-[#F8FAFC]">
       <Navbar />
       <main className="space-y-0">
         <FadeIn>

@@ -1,12 +1,20 @@
 import Image from "next/image";
 
+const footerLinks = [
+  { label: "Home", href: "#home" },
+  { label: "Pathway", href: "#pathway" },
+  { label: "Services", href: "#services" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "Academics", href: "#academics" },
+];
+
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 py-12">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 text-sm text-slate-300 sm:flex-row sm:items-start sm:justify-between">
-        <div className="space-y-3">
+    <footer id="contact" className="border-t border-white/10 bg-[#0A0A0F] py-16">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 text-sm text-[#94A3B8] lg:flex-row lg:items-start lg:justify-between">
+        <div className="space-y-4 lg:max-w-sm">
           <div className="flex items-center gap-3">
-            <div className="relative h-10 w-10 overflow-hidden rounded-full border border-white/10 bg-slate-900">
+            <div className="relative h-10 w-10 overflow-hidden rounded-lg border border-white/10 bg-[#13131A]">
               <Image
                 src="/images/brand/logo.jpg"
                 alt="Atlantic Pathway logo"
@@ -16,36 +24,65 @@ export default function Footer() {
               />
             </div>
             <div>
-              <p className="text-base font-semibold text-white">Atlantic Pathway</p>
-              <p className="text-xs text-slate-400">Glasgow, Scotland</p>
+              <p className="text-base font-semibold text-[#F8FAFC]">Atlantic Pathway</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-[#64748B]">
+                Glasgow, Scotland
+              </p>
             </div>
           </div>
-          <p className="text-sm text-slate-300">
-            Building elite football pathways from Glasgow to U.S. college scholarships.
+          <p className="text-sm text-[#94A3B8]">
+            A premium football scholarship pathway connecting Scottish talent with U.S.
+            college programs.
           </p>
         </div>
-        <div className="space-y-2 text-sm">
-          <p className="text-white">Contact</p>
-          <p>hello@atlanticpathway.com</p>
-          <p>+44 (0) 0000 000000</p>
-        </div>
-        <div className="space-y-2 text-sm">
-          <p className="text-white">Social</p>
-          <div className="flex flex-col gap-1">
-            <a className="transition hover:text-[#A2D729]" href="#">
-              Instagram
-            </a>
-            <a className="transition hover:text-[#A2D729]" href="#">
-              TikTok
-            </a>
-            <a className="transition hover:text-[#A2D729]" href="#">
-              LinkedIn
-            </a>
+        <div className="space-y-3">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#64748B]">
+            Quick Links
+          </p>
+          <div className="flex flex-col gap-2">
+            {footerLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-sm text-[#94A3B8] transition duration-150 hover:text-[#F8FAFC]"
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
         </div>
-        <p className="text-xs text-slate-500">
-          © 2026 Atlantic Pathway. All rights reserved.
-        </p>
+        <div className="space-y-3">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#64748B]">
+            Contact
+          </p>
+          <p className="text-sm text-[#F8FAFC]">hello@atlanticpathway.com</p>
+          <p className="text-sm text-[#94A3B8]">+44 (0) 0000 000000</p>
+          <p className="text-sm text-[#64748B]">Glasgow, Scotland</p>
+        </div>
+        <div className="space-y-3">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#64748B]">
+            Social
+          </p>
+          <div className="flex flex-col gap-2">
+            {[
+              "Instagram",
+              "TikTok",
+              "LinkedIn",
+              "YouTube",
+            ].map((item) => (
+              <a
+                key={item}
+                className="text-sm text-[#94A3B8] transition duration-150 hover:text-[#F8FAFC]"
+                href="#"
+              >
+                {item}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="mx-auto mt-10 w-full max-w-6xl px-6 text-xs text-[#64748B]">
+        © 2026 Atlantic Pathway. All rights reserved.
       </div>
     </footer>
   );

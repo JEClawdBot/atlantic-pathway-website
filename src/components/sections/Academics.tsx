@@ -1,38 +1,58 @@
 const requirements = [
-  "Minimum 2.0 GPA (C average) benchmark",
-  "Completion of National 5s and Highers",
-  "Official academic transcripts and test score documentation",
-  "Guidance on NCAA/NAIA academic eligibility standards",
+  {
+    title: "Minimum GPA",
+    detail: "2.0 GPA (C average) or equivalent UK grades.",
+  },
+  {
+    title: "UK Qualifications",
+    detail: "Completion of National 5s and Highers documentation.",
+  },
+  {
+    title: "Official Records",
+    detail: "Transcripts and test scores submitted for eligibility review.",
+  },
+  {
+    title: "NCAA / NAIA Alignment",
+    detail: "Guidance to keep athletes compliant with U.S. eligibility rules.",
+  },
 ];
 
 export default function Academics() {
   return (
     <section
       id="academics"
-      className="border-t border-white/5 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900/40 py-20 sm:py-24"
+      className="border-t border-white/5 bg-[#0A0A0F] py-20 sm:py-28"
     >
       <div className="mx-auto w-full max-w-6xl px-6">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr]">
           <div className="space-y-5">
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#A2D729]/80">
-              Academic Requirements
+            <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#64748B]">
+              Academics
             </p>
-            <h2 className="text-3xl font-semibold text-white sm:text-4xl">
+            <h2 className="text-3xl font-semibold tracking-tight text-[#F8FAFC] sm:text-4xl">
               Academic readiness keeps scholarship opportunities open.
             </h2>
-            <p className="text-base text-slate-300">
-              We help players translate UK qualifications into the U.S. eligibility system.
+            <p className="text-base text-[#94A3B8]">
+              We translate UK qualifications into the U.S. system and keep every athlete
+              aligned with NCAA and NAIA standards.
             </p>
+            <div className="rounded-2xl border border-white/10 bg-[#13131A] p-5 text-sm text-[#94A3B8]">
+              We handle documentation reviews and provide ongoing academic check-ins for
+              parents and athletes.
+            </div>
           </div>
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-            <ul className="space-y-3 text-sm text-slate-200">
-              {requirements.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <span className="mt-2 h-2 w-2 rounded-full bg-[#A2D729]" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {requirements.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-2xl border border-white/10 bg-white/5 p-5"
+              >
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#A2D729]">
+                  {item.title}
+                </p>
+                <p className="mt-3 text-sm text-[#94A3B8]">{item.detail}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

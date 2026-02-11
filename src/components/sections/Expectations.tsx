@@ -1,19 +1,19 @@
 const expectations = [
   {
     title: "Academic Dedication",
-    detail: "Maintain school attendance and stay on track through National 5s and Highers.",
+    detail: "Consistent attendance and progress through National 5s and Highers.",
   },
   {
     title: "Performance Monitoring",
-    detail: "Monthly fitness testing across strength, cardiovascular, and agility markers.",
+    detail: "Monthly testing across strength, speed, and agility to track development.",
   },
   {
     title: "Communication",
-    detail: "Respond promptly to consultant tasks and report direct U.S. coach contact.",
+    detail: "Clear, timely updates with consultants and reporting of coach contact.",
   },
   {
-    title: "Character & Reputation",
-    detail: "Clean social media with zero tolerance for alcohol, drugs, or violence.",
+    title: "Character",
+    detail: "Professional standards on and off the pitch, including social conduct.",
   },
 ];
 
@@ -21,30 +21,37 @@ export default function Expectations() {
   return (
     <section
       id="expectations"
-      className="border-t border-white/5 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900/40 py-20 sm:py-24"
+      className="border-t border-white/5 bg-[#0A0A0F] py-20 sm:py-28"
     >
       <div className="mx-auto w-full max-w-6xl px-6">
-        <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr]">
+        <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="space-y-5">
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#A2D729]/80">
-              Athlete Expectations
+            <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#64748B]">
+              Expectations
             </p>
-            <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-              Commitment is the difference between interest and opportunity.
+            <h2 className="text-3xl font-semibold tracking-tight text-[#F8FAFC] sm:text-4xl">
+              Professional standards that turn ambition into opportunity.
             </h2>
-            <p className="text-base text-slate-300">
-              We set professional standards so every athlete is ready for the demands of
-              U.S. college football.
+            <p className="text-base text-[#94A3B8]">
+              Every athlete commits to the behaviors required by U.S. college programs and
+              scholarship partners.
             </p>
           </div>
           <div className="space-y-4">
-            {expectations.map((item) => (
+            {expectations.map((item, index) => (
               <div
                 key={item.title}
-                className="rounded-2xl border border-white/10 bg-white/5 p-5"
+                className="flex gap-4 rounded-2xl border border-white/10 bg-white/5 p-5"
               >
-                <h3 className="text-base font-semibold text-white">{item.title}</h3>
-                <p className="mt-2 text-sm text-slate-300">{item.detail}</p>
+                <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#A2D729]">
+                  {String(index + 1).padStart(2, "0")}
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold text-[#F8FAFC]">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-[#94A3B8]">{item.detail}</p>
+                </div>
               </div>
             ))}
           </div>
