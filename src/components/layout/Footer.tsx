@@ -1,12 +1,16 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const footerLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Pathway", href: "#pathway" },
-  { label: "Services", href: "#services" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Academics", href: "#academics" },
-];
+  { label: "Home", href: "#home", type: "anchor" },
+  { label: "Pathway", href: "#pathway", type: "anchor" },
+  { label: "Services", href: "#services", type: "anchor" },
+  { label: "Pricing", href: "#pricing", type: "anchor" },
+  { label: "Academics", href: "#academics", type: "anchor" },
+  { label: "Staff", href: "/staff", type: "route" },
+  { label: "Enquire", href: "/enquiry", type: "route" },
+  { label: "FAQ", href: "/faq", type: "route" },
+] as const;
 
 export default function Footer() {
   return (
@@ -40,15 +44,25 @@ export default function Footer() {
             Quick Links
           </p>
           <div className="flex flex-col gap-2">
-            {footerLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-sm text-[#94A3B8] transition duration-150 hover:text-[#F8FAFC]"
-              >
-                {link.label}
-              </a>
-            ))}
+            {footerLinks.map((link) =>
+              link.type === "route" ? (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm text-[#94A3B8] transition duration-150 hover:text-[#F8FAFC]"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm text-[#94A3B8] transition duration-150 hover:text-[#F8FAFC]"
+                >
+                  {link.label}
+                </a>
+              )
+            )}
           </div>
         </div>
         <div className="space-y-3">
@@ -64,12 +78,7 @@ export default function Footer() {
             Social
           </p>
           <div className="flex flex-col gap-2">
-            {[
-              "Instagram",
-              "TikTok",
-              "LinkedIn",
-              "YouTube",
-            ].map((item) => (
+            {["Instagram", "TikTok", "LinkedIn", "YouTube"].map((item) => (
               <a
                 key={item}
                 className="text-sm text-[#94A3B8] transition duration-150 hover:text-[#F8FAFC]"

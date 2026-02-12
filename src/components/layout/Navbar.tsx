@@ -1,15 +1,22 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const navItems = [
+const sectionLinks = [
   { label: "Home", href: "#home" },
   { label: "Pathway", href: "#pathway" },
   { label: "Services", href: "#services" },
   { label: "Pricing", href: "#pricing" },
   { label: "Academics", href: "#academics" },
   { label: "Contact", href: "#contact" },
+];
+
+const pageLinks = [
+  { label: "Staff", href: "/staff" },
+  { label: "Enquire", href: "/enquiry" },
+  { label: "FAQ", href: "/faq" },
 ];
 
 export default function Navbar() {
@@ -54,7 +61,7 @@ export default function Navbar() {
           </div>
         </a>
         <nav className="hidden items-center gap-6 text-sm text-[#94A3B8] md:flex">
-          {navItems.map((item) => (
+          {sectionLinks.map((item) => (
             <a
               key={item.href}
               href={item.href}
@@ -62,6 +69,16 @@ export default function Navbar() {
             >
               {item.label}
             </a>
+          ))}
+          <span className="h-4 w-px bg-white/10" />
+          {pageLinks.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="transition duration-150 hover:text-[#F8FAFC]"
+            >
+              {item.label}
+            </Link>
           ))}
         </nav>
         <div className="hidden items-center gap-3 md:flex">
@@ -105,11 +122,14 @@ export default function Navbar() {
       </div>
       <div
         className={`border-t border-white/10 bg-[#0A0A0F]/95 px-6 py-4 text-sm text-[#94A3B8] transition-all duration-300 md:hidden ${
-          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          isOpen ? "max-h-[32rem] opacity-100" : "max-h-0 opacity-0"
         } overflow-hidden`}
       >
         <div className="flex flex-col gap-4">
-          {navItems.map((item) => (
+          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#64748B]">
+            Sections
+          </p>
+          {sectionLinks.map((item) => (
             <a
               key={item.href}
               href={item.href}
@@ -118,6 +138,20 @@ export default function Navbar() {
             >
               {item.label}
             </a>
+          ))}
+          <div className="h-px bg-white/10" />
+          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#64748B]">
+            Pages
+          </p>
+          {pageLinks.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="transition duration-150 hover:text-[#F8FAFC]"
+              onClick={handleClose}
+            >
+              {item.label}
+            </Link>
           ))}
           <a
             href="#pathway"
