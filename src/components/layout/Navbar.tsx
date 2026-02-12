@@ -42,7 +42,7 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#home" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3">
           <div className="relative h-10 w-10 overflow-hidden rounded-lg border border-white/10 bg-[#13131A]">
             <Image
               src="/images/brand/logo.jpg"
@@ -59,7 +59,7 @@ export default function Navbar() {
             </p>
             <p className="text-xs text-[#64748B]">Glasgow • U.S. Scholarships</p>
           </div>
-        </a>
+        </Link>
         <nav className="hidden items-center gap-6 text-sm text-[#94A3B8] md:flex">
           {sectionLinks.map((item) => (
             <a

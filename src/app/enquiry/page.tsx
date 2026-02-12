@@ -10,7 +10,7 @@ const enquiryPaths = [
     description:
       "Interested in shaping the future with us? Request a meeting with our recruitment lead to discuss career opportunities and how you can contribute to the Atlantic Pathway mission.",
     cta: "Request a Meeting",
-    href: "mailto:hello@atlanticpathway.com",
+    href: "mailto:hello@atlanticpathway.com?subject=Career%20Enquiry%20%E2%80%93%20Join%20the%20Atlantic%20Pathway%20Team",
     icon: Users,
   },
   {
@@ -18,7 +18,7 @@ const enquiryPaths = [
     description:
       "See our impact in person. Book your spot at one of our upcoming regional showcase events to meet the team and network with our community.",
     cta: "Book Your Spot",
-    href: "mailto:hello@atlanticpathway.com",
+    href: "mailto:hello@atlanticpathway.com?subject=Event%20Booking%20%E2%80%93%20Showcase%20Registration",
     icon: CalendarCheck,
   },
   {
@@ -26,7 +26,7 @@ const enquiryPaths = [
     description:
       "Not ready for a meeting yet? Request our latest PDF infographic for a visual deep dive into our process, results, and long-term vision.",
     cta: "Request PDF",
-    href: "mailto:hello@atlanticpathway.com",
+    href: "mailto:hello@atlanticpathway.com?subject=PDF%20Request%20%E2%80%93%20Atlantic%20Pathway%20Infographic",
     icon: FileText,
   },
 ];
