@@ -1,18 +1,28 @@
 const phases = [
   {
     title: "Preparation Phase",
-    summary: "Initial registration, evaluation, and early athlete profiling.",
-    price: "£1,500 total",
-    details: ["£450 registration", "7 monthly payments of £150", "Includes early evaluation"],
+    ageRange: "14–17 years old",
+    summary: "Included throughout early development and profiling.",
+    details: [
+      "Elite Training",
+      "Fitness Program",
+      "Nutritional Guidance",
+      "Annual Summer Camp",
+      "Showcase Events",
+      "Match Fixtures",
+    ],
   },
   {
     title: "Commitment Phase",
-    summary: "Full recruitment drive and scholarship negotiations.",
-    price: "£1,500 total",
+    ageRange: "17+ years old",
+    summary: "Included during recruitment, placement, and scholarship support.",
     details: [
-      "£450 secondary registration",
-      "7 monthly payments of £150",
-      "Recruitment + placement support",
+      "Highlight Video",
+      "College Meetings & Networking",
+      "Scholarship Negotiation",
+      "SAT Assistance",
+      "Admissions & Visa Paperwork",
+      "Eligibility Assistance",
     ],
   },
 ];
@@ -26,22 +36,22 @@ export default function Pricing() {
             Pricing
           </p>
           <h2 className="text-3xl font-semibold tracking-tight text-[#F8FAFC] sm:text-4xl">
-            Transparent phases that keep families informed and confident.
+            Clear phases that show exactly what’s included along the pathway.
           </h2>
           <p className="text-base text-[#94A3B8]">
-            Structured payments support a long-term pathway while maintaining accountability
-            for both parties.
+            Each phase is built around tangible support so families know what athletes receive
+            at every stage.
           </p>
         </div>
         <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_auto_1fr] lg:items-stretch">
           <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(162,215,41,0.12),_transparent_60%)]" />
             <div className="relative">
-              <div className="flex items-center justify-between">
+              <div>
                 <h3 className="text-xl font-semibold text-[#F8FAFC]">{phases[0].title}</h3>
-                <span className="text-xs font-semibold uppercase tracking-[0.3em] text-[#A2D729]">
-                  {phases[0].price}
-                </span>
+                <p className="mt-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#A2D729]">
+                  {phases[0].ageRange}
+                </p>
               </div>
               <p className="mt-3 text-sm text-[#94A3B8]">{phases[0].summary}</p>
               <ul className="mt-5 space-y-3 text-sm text-[#94A3B8]">
@@ -69,11 +79,11 @@ export default function Pricing() {
           </div>
           <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
             <div className="relative">
-              <div className="flex items-center justify-between">
+              <div>
                 <h3 className="text-xl font-semibold text-[#F8FAFC]">{phases[1].title}</h3>
-                <span className="text-xs font-semibold uppercase tracking-[0.3em] text-[#A2D729]">
-                  {phases[1].price}
-                </span>
+                <p className="mt-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#A2D729]">
+                  {phases[1].ageRange}
+                </p>
               </div>
               <p className="mt-3 text-sm text-[#94A3B8]">{phases[1].summary}</p>
               <ul className="mt-5 space-y-3 text-sm text-[#94A3B8]">

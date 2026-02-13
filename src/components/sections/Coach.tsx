@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Coach() {
   return (
@@ -35,12 +36,20 @@ export default function Coach() {
           <div className="rounded-2xl border border-white/10 bg-white/5 p-5 text-sm text-[#94A3B8]">
             UEFA Licensed • Founder • Glasgow based program director
           </div>
-          <a
-            href="#contact"
-            className="inline-flex items-center justify-center rounded-lg border border-white/10 px-5 py-3 text-xs font-semibold uppercase tracking-widest text-[#F8FAFC] transition duration-150 hover:border-[#A2D729]/50 hover:text-[#A2D729]"
-          >
-            Schedule a call
-          </a>
+          <div className="flex flex-wrap items-center gap-4">
+            <Link
+              href="/enquiry"
+              className="inline-flex items-center justify-center rounded-lg border border-white/10 px-5 py-3 text-xs font-semibold uppercase tracking-widest text-[#F8FAFC] transition duration-150 hover:border-[#A2D729]/50 hover:text-[#A2D729]"
+            >
+              Schedule a call
+            </Link>
+            <Link
+              href="/staff"
+              className="inline-flex items-center text-sm font-semibold text-[#A2D729] transition duration-150 hover:text-[#B8E63E]"
+            >
+              Meet the full team →
+            </Link>
+          </div>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const trustItems = ["UEFA Licensed", "Glasgow Based", "US College Network"];
 
@@ -23,12 +24,12 @@ export default function Hero() {
             and training to academic prep, recruiting, and placement with U.S. colleges.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <a
-              href="#pathway"
+            <Link
+              href="/enquiry"
               className="inline-flex items-center justify-center rounded-lg bg-[#A2D729] px-6 py-3 text-xs font-semibold uppercase tracking-widest text-[#0A0A0F] transition duration-150 hover:bg-[#B8E63E]"
             >
               Start your journey
-            </a>
+            </Link>
             <a
               href="#services"
               className="inline-flex items-center justify-center rounded-lg border border-white/10 px-6 py-3 text-xs font-semibold uppercase tracking-widest text-[#F8FAFC] transition duration-150 hover:border-[#A2D729]/50 hover:text-[#A2D729]"

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const expectations = [
   {
     title: "Academic Dedication",
@@ -36,6 +38,12 @@ export default function Expectations() {
               Every athlete commits to the behaviors required by U.S. college programs and
               scholarship partners.
             </p>
+            <Link
+              href="/faq"
+              className="inline-flex items-center text-sm font-semibold text-[#A2D729] transition duration-150 hover:text-[#B8E63E]"
+            >
+              Read our FAQ →
+            </Link>
           </div>
           <div className="space-y-4">
             {expectations.map((item, index) => (
