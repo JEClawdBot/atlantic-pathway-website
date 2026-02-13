@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const footerLinks = [
-  { label: "Home", href: "#home", type: "anchor" },
-  { label: "Pathway", href: "#pathway", type: "anchor" },
-  { label: "Services", href: "#services", type: "anchor" },
-  { label: "Pricing", href: "#pricing", type: "anchor" },
-  { label: "Academics", href: "#academics", type: "anchor" },
+  { label: "Home", href: "/#home", type: "anchor" },
+  { label: "Pathway", href: "/#pathway", type: "anchor" },
+  { label: "Services", href: "/#services", type: "anchor" },
+  { label: "Pricing", href: "/#pricing", type: "anchor" },
+  { label: "Academics", href: "/#academics", type: "anchor" },
   { label: "Staff", href: "/staff", type: "route" },
   { label: "Enquire", href: "/enquiry", type: "route" },
   { label: "FAQ", href: "/faq", type: "route" },

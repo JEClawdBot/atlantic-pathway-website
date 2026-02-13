@@ -5,12 +5,12 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const sectionLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Pathway", href: "#pathway" },
-  { label: "Services", href: "#services" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Academics", href: "#academics" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#home" },
+  { label: "Pathway", href: "/#pathway" },
+  { label: "Services", href: "/#services" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "Academics", href: "/#academics" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const pageLinks = [
