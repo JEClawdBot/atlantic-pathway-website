@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -34,6 +35,10 @@ export const metadata: Metadata = {
     description,
     images: ["/images/players/full-squad-official.jpg"],
   },
+  icons: {
+    icon: "/images/brand/logo.jpg",
+    apple: "/images/brand/logo.jpg",
+  },
 };
 
 export default function RootLayout({
@@ -46,7 +51,29 @@ export default function RootLayout({
       <body
         className={`${inter.variable} bg-[#0A0A0F] text-[#F8FAFC] antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SportsOrganization",
+              name: "Atlantic Pathway",
+              description:
+                "Glasgow-based sports scholarship company helping footballers secure athletic scholarships at U.S. colleges.",
+              url: "https://atlanticpathway.com",
+              logo: "https://atlanticpathway.com/images/brand/logo.jpg",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Glasgow",
+                addressCountry: "GB",
+              },
+              sport: "Soccer",
+              sameAs: [],
+            }),
+          }}
+        />
         {children}
+        <Analytics />
       </body>
     </html>
   );

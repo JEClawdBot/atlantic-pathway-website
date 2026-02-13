@@ -82,18 +82,18 @@ export default function Navbar() {
           ))}
         </nav>
         <div className="hidden items-center gap-3 md:flex">
-          <a
-            href="#contact"
+          <Link
+            href="/enquiry"
             className="rounded-lg border border-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-[#94A3B8] transition duration-150 hover:border-[#A2D729]/50 hover:text-[#F8FAFC]"
           >
             Get in touch
-          </a>
-          <a
-            href="#pathway"
+          </Link>
+          <Link
+            href="/enquiry"
             className="rounded-lg bg-[#A2D729] px-4 py-2 text-xs font-semibold uppercase tracking-widest text-[#0A0A0F] transition duration-150 hover:bg-[#B8E63E]"
           >
             Start your journey
-          </a>
+          </Link>
         </div>
         <button
           type="button"
@@ -153,13 +153,13 @@ export default function Navbar() {
               {item.label}
             </Link>
           ))}
-          <a
-            href="#pathway"
+          <Link
+            href="/enquiry"
             className="rounded-lg bg-[#A2D729] px-4 py-2 text-xs font-semibold uppercase tracking-widest text-[#0A0A0F]"
             onClick={handleClose}
           >
             Start your journey
-          </a>
+          </Link>
         </div>
       </div>
     </header>
