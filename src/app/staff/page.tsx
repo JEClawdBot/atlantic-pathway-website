@@ -42,17 +42,6 @@ const staffMembers = [
       "Goalkeeping Coach",
     ],
   },
-  {
-    name: "Logan Burton",
-    role: "Development Coach",
-    initials: "LB",
-    region: "Scotland",
-    credentials: [
-      "HNC Sports Coaching",
-      "5+ Years Player Development Experience",
-      "First Team GK Coach @ Knightswood FC",
-    ],
-  },
 ];
 
 export default function StaffPage() {
