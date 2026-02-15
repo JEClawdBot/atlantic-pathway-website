@@ -15,6 +15,8 @@ const sectionLinks = [
 
 const pageLinks = [
   { label: "Staff", href: "/staff" },
+  { label: "Partnerships", href: "/partnerships" },
+  { label: "Schools", href: "/schools" },
   { label: "Enquire", href: "/enquiry" },
   { label: "FAQ", href: "/faq" },
 ];

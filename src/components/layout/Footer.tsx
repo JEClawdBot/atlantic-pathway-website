@@ -8,6 +8,8 @@ const footerLinks = [
   { label: "Pricing", href: "/#pricing", type: "anchor" },
   { label: "Academics", href: "/#academics", type: "anchor" },
   { label: "Staff", href: "/staff", type: "route" },
+  { label: "Partnerships", href: "/partnerships", type: "route" },
+  { label: "Schools", href: "/schools", type: "route" },
   { label: "Enquire", href: "/enquiry", type: "route" },
   { label: "FAQ", href: "/faq", type: "route" },
 ] as const;
