@@ -1,3 +1,4 @@
+import Image from "next/image";
 import FadeIn from "@/components/ui/FadeIn";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
@@ -7,6 +8,7 @@ const staffMembers = [
     name: "Lewis Collins",
     role: "CEO & Lead Coach",
     initials: "LC",
+    photo: "/images/lewis/lewis-portrait-dark.jpg",
     region: "Scotland / North England",
     credentials: [
       "B.S. Sports Coach",
@@ -33,6 +35,7 @@ const staffMembers = [
     name: "Dylan Meichan",
     role: "Goalkeeping Coach",
     initials: "DM",
+    photo: "/images/dylan-headshot.jpg",
     region: "Scotland",
     credentials: [
       "A.S. Exercise Science",
@@ -72,16 +75,30 @@ export default function StaffPage() {
                 <article className="group relative h-full overflow-hidden rounded-3xl border border-white/10 bg-[#0F1116]/80 p-8 shadow-[0_0_0_1px_rgba(255,255,255,0.02)] transition duration-300 hover:border-[#A2D729]/40">
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#A2D729]/10 via-transparent to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
                   <div className="relative z-10 flex h-full flex-col gap-6">
-                    <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#13131A] p-6">
-                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(162,215,41,0.25),_transparent_60%)]" />
-                      <div className="relative flex h-32 w-full items-end justify-between">
-                        <span className="text-xs font-semibold uppercase tracking-[0.35em] text-[#94A3B8]">
-                          Atlantic Pathway
-                        </span>
-                        <span className="text-3xl font-semibold text-[#F8FAFC]">
-                          {member.initials}
-                        </span>
-                      </div>
+                    <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#13131A]">
+                      {member.photo ? (
+                        <div className="relative aspect-[4/5] w-full">
+                          <Image
+                            src={member.photo}
+                            alt={member.name}
+                            fill
+                            className="object-cover object-top"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                          />
+                        </div>
+                      ) : (
+                        <div className="relative p-6">
+                          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(162,215,41,0.25),_transparent_60%)]" />
+                          <div className="relative flex h-32 w-full items-end justify-between">
+                            <span className="text-xs font-semibold uppercase tracking-[0.35em] text-[#94A3B8]">
+                              Atlantic Pathway
+                            </span>
+                            <span className="text-3xl font-semibold text-[#F8FAFC]">
+                              {member.initials}
+                            </span>
+                          </div>
+                        </div>
+                      )}
                     </div>
 
                     <div className="space-y-3">
