@@ -36,6 +36,7 @@ const staffMembers = [
     name: "Dylan Meichan",
     role: "Goalkeeping Coach",
     initials: "DM",
+    photo: "/images/dylan-headshot.jpg",
     region: "Scotland",
     credentials: [
       "A.S. Exercise Science",
