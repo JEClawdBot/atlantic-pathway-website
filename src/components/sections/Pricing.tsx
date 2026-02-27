@@ -33,7 +33,7 @@ export default function Pricing() {
       <div className="mx-auto w-full max-w-6xl px-6">
         <div className="max-w-2xl space-y-4">
           <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#64748B]">
-            Pricing
+            Phases
           </p>
           <h2 className="text-3xl font-semibold tracking-tight text-[#F8FAFC] sm:text-4xl">
             Clear phases that show exactly what’s included along the pathway.

@@ -5,7 +5,7 @@ const footerLinks = [
   { label: "Home", href: "/#home", type: "anchor" },
   { label: "Pathway", href: "/#pathway", type: "anchor" },
   { label: "Services", href: "/#services", type: "anchor" },
-  { label: "Pricing", href: "/#pricing", type: "anchor" },
+  { label: "Phases", href: "/#pricing", type: "anchor" },
   { label: "Academics", href: "/#academics", type: "anchor" },
   { label: "Staff", href: "/staff", type: "route" },
   { label: "Partnerships", href: "/partnerships", type: "route" },

@@ -8,7 +8,7 @@ const sectionLinks = [
   { label: "Home", href: "/#home" },
   { label: "Pathway", href: "/#pathway" },
   { label: "Services", href: "/#services" },
-  { label: "Pricing", href: "/#pricing" },
+  { label: "Phases", href: "/#pricing" },
   { label: "Academics", href: "/#academics" },
   { label: "Contact", href: "/#contact" },
 ];
