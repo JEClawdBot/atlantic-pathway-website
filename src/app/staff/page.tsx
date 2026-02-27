@@ -23,6 +23,7 @@ const staffMembers = [
     name: "Ian Elliott",
     role: "Consultant / Coach",
     initials: "IE",
+    photo: "/images/ian-headshot.jpg",
     region: "Scotland",
     credentials: [
       "UEFA Licensed Coach",
@@ -35,7 +36,6 @@ const staffMembers = [
     name: "Dylan Meichan",
     role: "Goalkeeping Coach",
     initials: "DM",
-    photo: "/images/dylan-headshot.jpg",
     region: "Scotland",
     credentials: [
       "A.S. Exercise Science",
